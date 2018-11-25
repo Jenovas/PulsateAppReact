@@ -1,0 +1,5 @@
+rootProject.name = 'PulsateAppReact'
+
+include ':app'
+include ':react-native-pulsate-sdk-react'
+project(':react-native-pulsate-sdk-react').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-pulsate-sdk-react/android')
