@@ -1,0 +1,28 @@
+{
+  "name": "RNPulsateSdkReact",
+  "version": "1.0.23",
+  "summary": "RNPulsateSdkReact",
+  "description": "RNPulsateSdkReact",
+  "homepage": "https://pulsate.readme.io/v2.0/docs",
+  "license": "MIT",
+  "authors": {
+    "author": "author@domain.cn"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/author/RNPulsateSdkReact.git",
+    "tag": "master"
+  },
+  "source_files": "RNPulsateSdkReact/**/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "React": [
+
+    ],
+    "PULPulsate": [
+
+    ]
+  }
+}

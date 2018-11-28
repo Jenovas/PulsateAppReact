@@ -1,0 +1,113 @@
+/* No comment provided by engineer. */
+"%d days ago" = "%d dias atrás";
+
+/* No comment provided by engineer. */
+"%d hours ago" = "%d horas atrás";
+
+/* No comment provided by engineer. */
+"%d minutes ago" = "%d minutos atrás";
+
+/* No comment provided by engineer. */
+"%d months ago" = "%d meses atrás";
+
+/* No comment provided by engineer. */
+"%d seconds ago" = "%d segundos atrás";
+
+/* No comment provided by engineer. */
+"%d weeks ago" = "%d semanas atrás";
+
+/* No comment provided by engineer. */
+"%d years ago" = "%d anos atrás";
+
+/* No comment provided by engineer. */
+"A minute ago" = "Há um minuto";
+
+/* No comment provided by engineer. */
+"An hour ago" = "Há uma hora";
+
+/* No comment provided by engineer. */
+"Just now" = "Agora";
+
+/* No comment provided by engineer. */
+"Last month" = "Mês passado";
+
+/* No comment provided by engineer. */
+"Last week" = "Semana passada";
+
+/* No comment provided by engineer. */
+"Last year" = "Ano passado";
+
+/* No comment provided by engineer. */
+"Yesterday" = "Ontem";
+
+/* No comment provided by engineer. */
+"1 year ago" = "1 ano atrás";
+
+/* No comment provided by engineer. */
+"1 month ago" = "1 mês atrás";
+
+/* No comment provided by engineer. */
+"1 week ago" = "1 semana atrás";
+
+/* No comment provided by engineer. */
+"1 day ago" = "1 dia atrás";
+
+/* No comment provided by engineer. */
+"This morning" = "Esta manhã";
+
+/* No comment provided by engineer. */
+"This afternoon" = "Esta tarde";
+
+/* No comment provided by engineer. */
+"Today" = "Hoje";
+
+/* No comment provided by engineer. */
+"This week" = "Esta semana";
+
+/* No comment provided by engineer. */
+"This month" = "Este mês";
+
+/* No comment provided by engineer. */
+"This year" = "Este ano";
+
+"reply_button_label" = "";
+"new_message_button_label" = "";
+"new_messages_button_label" = "";
+"new_updates" = "";
+"no_internet_server_error" = "";
+"view_conversation_button_label" = "";
+"select_subject_label"= "";
+"write_a_message_hint"= "";
+"give_your_message_a_subject" = "";
+"sent_a_message" = "";
+"replied_to_your" = "";
+"send_button" = "";
+
+"new_card_label" = "";
+"feed_title_label"= "";
+"new_message_title_label"= "";
+
+"subject_feedback_label"= "";
+"subject_feature_suggestion_label"= "";
+"subject_complaint_label"= "";
+"subject_other_label"= "";
+
+"feed_is_empty_title"= "";
+"icon_left_text"= "";
+"icon_right_text"= "";
+"icon_bottom_text"= "";
+"second_paragraph_text"= "";
+
+"message_sending" = "";
+"message_sent" = "";
+"message_failed" = "";
+"try_again" = "";
+
+// 2.4.2
+
+"other_subject_hint" = "";
+"reached_bottom_of_feed" = "";
+
+// 2.4.5
+
+"pulsate_YOU_in_message_card" = "";

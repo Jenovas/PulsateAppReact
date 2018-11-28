@@ -1,0 +1,37 @@
+PODS:
+  - PULPulsate (2.14.5)
+  - React (0.57.5):
+    - React/Core (= 0.57.5)
+  - React/Core (0.57.5):
+    - yoga (= 0.57.5.React)
+  - RNPulsateSdkReact (1.0.23):
+    - PULPulsate
+    - React
+  - yoga (0.57.5.React)
+
+DEPENDENCIES:
+  - React (from `../node_modules/react-native`)
+  - RNPulsateSdkReact (from `../node_modules/react-native-pulsate-sdk-react/ios`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PULPulsate
+
+EXTERNAL SOURCES:
+  React:
+    :path: "../node_modules/react-native"
+  RNPulsateSdkReact:
+    :path: "../node_modules/react-native-pulsate-sdk-react/ios"
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+SPEC CHECKSUMS:
+  PULPulsate: 6a06c8018145e160375dd2010cd2a77be54e1d13
+  React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
+  RNPulsateSdkReact: 07ac55b45677157d3b4c653c33559f0d513e68b1
+  yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
+
+PODFILE CHECKSUM: 39b6a037ce2c95272fc0973b92c75fddd7509d2b
+
+COCOAPODS: 1.5.3

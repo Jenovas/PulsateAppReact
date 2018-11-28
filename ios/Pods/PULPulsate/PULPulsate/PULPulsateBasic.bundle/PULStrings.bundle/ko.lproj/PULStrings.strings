@@ -1,0 +1,113 @@
+/* No comment provided by engineer. */
+"%d days ago" = "%d일전";
+
+/* No comment provided by engineer. */
+"%d hours ago" = "%d시간전";
+
+/* No comment provided by engineer. */
+"%d minutes ago" = "%d분전";
+
+/* No comment provided by engineer. */
+"%d months ago" = "%d개월전";
+
+/* No comment provided by engineer. */
+"%d seconds ago" = "%d초전";
+
+/* No comment provided by engineer. */
+"%d weeks ago" = "%d주전";
+
+/* No comment provided by engineer. */
+"%d years ago" = "%d년전";
+
+/* No comment provided by engineer. */
+"A minute ago" = "1분전";
+
+/* No comment provided by engineer. */
+"An hour ago" = "1시간전";
+
+/* No comment provided by engineer. */
+"Just now" = "방금전";
+
+/* No comment provided by engineer. */
+"Last month" = "지난달";
+
+/* No comment provided by engineer. */
+"Last week" = "지난주";
+
+/* No comment provided by engineer. */
+"Last year" = "지난해";
+
+/* No comment provided by engineer. */
+"Yesterday" = "어제";
+
+/* No comment provided by engineer. */
+"1 year ago" = "1년전";
+
+/* No comment provided by engineer. */
+"1 month ago" = "1개월전";
+
+/* No comment provided by engineer. */
+"1 week ago" = "1주전";
+
+/* No comment provided by engineer. */
+"1 day ago" = "1일전";
+
+/* No comment provided by engineer. */
+"This morning" = "오늘 아침";
+
+/* No comment provided by engineer. */
+"This afternoon" = "오늘 오후";
+
+/* No comment provided by engineer. */
+"Today" = "오늘";
+
+/* No comment provided by engineer. */
+"This week" = "이번주";
+
+/* No comment provided by engineer. */
+"This month" = "이번달";
+
+/* No comment provided by engineer. */
+"This year" = "올해";
+
+"reply_button_label" = "";
+"new_message_button_label" = "";
+"new_messages_button_label" = "";
+"new_updates" = "";
+"no_internet_server_error" = "";
+"view_conversation_button_label" = "";
+"select_subject_label"= "";
+"write_a_message_hint"= "";
+"give_your_message_a_subject" = "";
+"sent_a_message" = "";
+"replied_to_your" = "";
+"send_button" = "";
+
+"new_card_label" = "";
+"feed_title_label"= "";
+"new_message_title_label"= "";
+
+"subject_feedback_label"= "";
+"subject_feature_suggestion_label"= "";
+"subject_complaint_label"= "";
+"subject_other_label"= "";
+
+"feed_is_empty_title"= "";
+"icon_left_text"= "";
+"icon_right_text"= "";
+"icon_bottom_text"= "";
+"second_paragraph_text"= "";
+
+"message_sending" = "";
+"message_sent" = "";
+"message_failed" = "";
+"try_again" = "";
+
+// 2.4.2
+
+"other_subject_hint" = "";
+"reached_bottom_of_feed" = "";
+
+// 2.4.5
+
+"pulsate_YOU_in_message_card" = "";

@@ -16,7 +16,46 @@ var { Pulsate } = PulsateManager;
 export default class App extends React.Component {
   _onPress() {
     Pulsate.setAuthData("d34a4374a9b21fa69c092493c55db142da25285ce154244cdd26958a32b08cd3", "a656a8e295ecb4732f514542718fe615efe852a0853e906158fe8db76f27fbb5", "164686352256");
-    Pulsate.startPulsateSession( (msg) => {console.log(msg)}, (err) => {console.log(err)} );
+    Pulsate.startPulsateSessionForAlias("RafaelReactAndroid",
+    (msg) => 
+    {
+      Pulsate.setNewThreadButtonEnabled(true);
+      Pulsate.sendLocationWithBeaconEvents(true);
+      Pulsate.setLocationUpdatesEnabled(true);
+      Pulsate.setInAppNotificationEnabled(true);
+      Pulsate.showLastInAppNotification();
+      Pulsate.setPushNotificationEnabled(true);
+      Pulsate.isPushNotificationEnabled(
+      (msg) => 
+      {
+        console.log("PUSH ENABLED");
+      },
+      (err) => 
+      {
+        console.log("PUSH DISABLED");
+      });
+      Pulsate.setUserAuthorized(true);
+      Pulsate.showLastUnauthorizedMessage();
+      Pulsate.updateFirstName("ReactRafaelAndroid");
+      Pulsate.updateLastName("ReactSkubiszAndroid");
+      Pulsate.updateEmail("rafael.skubsz.react@pulsatehq.com");
+      Pulsate.updateGender(0);
+      Pulsate.updateAge("31");
+      Pulsate.setPrivacy(1);
+      Pulsate.createAttributeWithString("react-string", "android-react");
+      Pulsate.createAttributeWithFloat("react-float", 2);
+      Pulsate.createAttributeWithInt("react-int", 5);
+      Pulsate.createAttributeWithBool("react-bool", true);
+      Pulsate.incrementCounter("react-android-counter1", 5);
+      Pulsate.decrementCounter("react-android-counter2", 3);
+      Pulsate.createEvent("react-android-event");
+      Pulsate.forceAttributeSync();
+      Pulsate.showFeed();
+    }, 
+    (err) => 
+    {
+      console.log(err);
+    });
   }
   
   render() {
