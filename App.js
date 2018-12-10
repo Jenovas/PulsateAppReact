@@ -25,7 +25,16 @@ export default class App extends React.Component {
       Pulsate.setInAppNotificationEnabled(true);
       Pulsate.showLastInAppNotification();
       Pulsate.setPushNotificationEnabled(true);
-      
+      Pulsate.isPushNotificationEnabled(
+        (msg) => 
+        {
+          console.log(msg);
+        },
+        (err) => 
+        {
+          console.log(err);
+        }
+      );
       Pulsate.setUserAuthorized(true);
       Pulsate.showLastUnauthorizedMessage();
       Pulsate.updateFirstName("ReactRafaelAndroid");
@@ -43,6 +52,33 @@ export default class App extends React.Component {
       Pulsate.createEvent("react-android-event");
       Pulsate.forceAttributeSync();
       Pulsate.showFeed();
+
+      Pulsate.setUserUnauthorizedListenerAndroid(
+        (msg) => 
+        {
+          console.log(msg);
+        }
+      );
+      Pulsate.setUnreadCountUpdateListenerAndroid(
+        (msg) => 
+        {
+          console.log(msg);
+        }
+      );
+
+      Pulsate.isUserAuthorizedIOS(
+        (msg) => 
+        {
+          console.log(msg);
+        },
+        (err) => 
+        {
+          console.log(err);
+        }
+      );
+      Pulsate.startLocationIOS();
+      Pulsate.startRemoteNotificationsIOS();
+      Pulsate.getBadgeCountIOS();
     }, 
     (err) => 
     {
@@ -55,6 +91,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <View style={styles.buttonContainer}>
           <Button onPress={this._onPress} title="Hello12345" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          <Button onPress={this._onPress} title="Hello123456" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          <Button onPress={this._onPress} title="Hello1234567" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
         </View>
       </View>
     );
