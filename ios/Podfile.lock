@@ -4,7 +4,7 @@ PODS:
     - React/Core (= 0.57.5)
   - React/Core (0.57.5):
     - yoga (= 0.57.5.React)
-  - RNPulsateSdkReact (1.0.23):
+  - RNPulsateSdkReact (1.0.27):
     - PULPulsate
     - React
   - yoga (0.57.5.React)
@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   PULPulsate: 6a06c8018145e160375dd2010cd2a77be54e1d13
   React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
-  RNPulsateSdkReact: 07ac55b45677157d3b4c653c33559f0d513e68b1
+  RNPulsateSdkReact: f308729db40a2fbfe9ce70355863da8cb95d8419
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
 PODFILE CHECKSUM: 39b6a037ce2c95272fc0973b92c75fddd7509d2b

@@ -25,15 +25,7 @@ export default class App extends React.Component {
       Pulsate.setInAppNotificationEnabled(true);
       Pulsate.showLastInAppNotification();
       Pulsate.setPushNotificationEnabled(true);
-      Pulsate.isPushNotificationEnabled(
-      (msg) => 
-      {
-        console.log("PUSH ENABLED");
-      },
-      (err) => 
-      {
-        console.log("PUSH DISABLED");
-      });
+      
       Pulsate.setUserAuthorized(true);
       Pulsate.showLastUnauthorizedMessage();
       Pulsate.updateFirstName("ReactRafaelAndroid");
