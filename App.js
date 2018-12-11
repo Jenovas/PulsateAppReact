@@ -28,12 +28,8 @@ export default class App extends React.Component {
         { cancelable: false }
       )
 
-      Pulsate.setNewThreadButtonEnabled(true);
       Pulsate.sendLocationWithBeaconEvents(true);
       Pulsate.setLocationUpdatesEnabled(true);
-      Pulsate.setInAppNotificationEnabled(true);
-      Pulsate.showLastInAppNotification();
-      Pulsate.setPushNotificationEnabled(true);
       Pulsate.isPushNotificationEnabled(
         (msg) => 
         {
@@ -44,16 +40,14 @@ export default class App extends React.Component {
           console.log(err);
         }
       );
-      Pulsate.setUserAuthorized(true);
-      Pulsate.showLastUnauthorizedMessage();
-      Pulsate.updateFirstName("ReactRafaelAndroid");
-      Pulsate.updateLastName("ReactSkubiszAndroid");
-      Pulsate.updateEmail("rafael.skubsz.react@pulsatehq.com");
-      Pulsate.updateGender(0);
-      Pulsate.updateAge("31");
+      Pulsate.updateFirstName("Rafael");
+      Pulsate.updateLastName("Skubisz");
+      Pulsate.updateEmail("rafael.skubsz@pulsatehq.com");
+      Pulsate.updateGender(1);
+      Pulsate.updateAge("28");
       Pulsate.setPrivacy(1);
       Pulsate.createAttributeWithString("react-string", "android-react");
-      Pulsate.createAttributeWithFloat("react-float", 2);
+      Pulsate.createAttributeWithFloat("react-float", 2.5);
       Pulsate.createAttributeWithInt("react-int", 5);
       Pulsate.createAttributeWithBool("react-bool", true);
       Pulsate.incrementCounter("react-android-counter1", 5);
@@ -108,12 +102,8 @@ export default class App extends React.Component {
         { cancelable: false }
       )
 
-      Pulsate.setNewThreadButtonEnabled(true);
       Pulsate.sendLocationWithBeaconEvents(true);
       Pulsate.setLocationUpdatesEnabled(true);
-      Pulsate.setInAppNotificationEnabled(true);
-      Pulsate.showLastInAppNotification();
-      Pulsate.setPushNotificationEnabled(true);
       Pulsate.isPushNotificationEnabled(
         (msg) => 
         {
@@ -124,16 +114,14 @@ export default class App extends React.Component {
           console.log(err);
         }
       );
-      Pulsate.setUserAuthorized(true);
-      Pulsate.showLastUnauthorizedMessage();
       Pulsate.updateFirstName("Phelim");
       Pulsate.updateLastName("O Brien");
       Pulsate.updateEmail("phelim.obrien.react@pulsatehq.com");
-      Pulsate.updateGender(0);
+      Pulsate.updateGender(1);
       Pulsate.updateAge("30");
       Pulsate.setPrivacy(1);
       Pulsate.createAttributeWithString("react-string", "android-react");
-      Pulsate.createAttributeWithFloat("react-float", 2);
+      Pulsate.createAttributeWithFloat("react-float", 2.5);
       Pulsate.createAttributeWithInt("react-int", 5);
       Pulsate.createAttributeWithBool("react-bool", true);
       Pulsate.incrementCounter("react-android-counter1", 5);
@@ -212,20 +200,82 @@ export default class App extends React.Component {
     );
   }
 
+  _onPressEnableThread() {
+    Pulsate.setNewThreadButtonEnabled(true);
+  }
+
+  _onPressDisableThread() {
+    Pulsate.setNewThreadButtonEnabled(false);
+  }
+
+  _onPressEnablePush() {
+    Pulsate.setPushNotificationEnabled(true);
+  }
+
+  _onPressDisablePush() {
+    Pulsate.setPushNotificationEnabled(false);
+  }
+
+  _onPressEnableInApps() {
+    Pulsate.setInAppNotificationEnabled(true);
+    Pulsate.showLastInAppNotification();
+  }
+
+  _onPressDisableInApps() {
+    Pulsate.setInAppNotificationEnabled(false);
+  }
+
+  _onPressAuthorize() {
+    Pulsate.setUserAuthorized(true);
+    Pulsate.showLastUnauthorizedMessage();
+  }
+
+  _onPressUnauthorize() {
+    Pulsate.setUserAuthorized(false);
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.buttonContainer}>
-          <Button onPress={this._onPressRafael} title="Login Rafael" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+      <View style={styles.maincontainer}>
+        <View style={styles.container}>
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressRafael} title="Login Rafael" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressLogout} title="Logout" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View>  
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressEnableThread} title="Enable Thread" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressEnablePush} title="Enable Push" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressEnableInApps} title="Enable InApps" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressAuthorize} title="Authorize" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
         </View>
-        <View style={styles.buttonContainer}>
-          <Button onPress={this._onPressPhelim} title="Login Phelim" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-        </View>
-        <View style={styles.buttonContainer}>    
-          <Button onPress={this._onPressFeed} title="Show Feed" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button onPress={this._onPressLogout} title="Logout" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+        <View style={styles.container}>     
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressPhelim} title="Login Phelim" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View>
+          <View style={styles.buttonContainer}>    
+            <Button onPress={this._onPressFeed} title="Show Feed" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressDisableThread} title="Disable Thread" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressDisablePush} title="Disable Push" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressDisableInApps} title="Disable InApps" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressUnauthorize} title="Unauthorize" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
         </View>
       </View>
     );
@@ -233,6 +283,13 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  maincontainer: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#FFFFFF'
+  },
   container: {
     flex: 1,
     alignItems: 'center',
@@ -241,6 +298,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF'
   },
   buttonContainer: {
+    width:200,
     backgroundColor: '#2E9298',
     borderRadius: 10,
     padding: 10,
