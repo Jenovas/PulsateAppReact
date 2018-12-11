@@ -11,6 +11,8 @@ target 'PulsateAppReact' do
   pod 'React', :path => '../node_modules/react-native'
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
   pod 'RNPulsateSdkReact', :path => '../node_modules/react-native-pulsate-sdk-react/ios'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end
 

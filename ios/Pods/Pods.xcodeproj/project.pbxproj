@@ -43,7 +43,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 000000001470;
+			remoteGlobalIDString = 000000001560;
 			remoteInfo = React;
 		};
 /* End PBXContainerItemProxy section */
@@ -78,6 +78,7 @@
 		11591F7E4DF963CDC52C69473B51311F /* RNPulsateSdkReact.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = RNPulsateSdkReact.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		115AFF82637E0DDDA1FC872622E5724B /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNode.h; path = yoga/YGNode.h; sourceTree = "<group>"; };
 		11984AD41265172F2070E030DE9B344C /* RCTClipboard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTClipboard.m; sourceTree = "<group>"; };
+		11DB20AF1D05ACE6096E73D26105D9EA /* PULPulsateBasic.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PULPulsateBasic.bundle; path = PULPulsate/PULPulsateBasic.bundle; sourceTree = "<group>"; };
 		12400FC0134C80D15F8BDECB5098F198 /* RCTSurfaceRootView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTSurfaceRootView.mm; sourceTree = "<group>"; };
 		1295B2B68D14EF6B77A3996747F68C5E /* RCTSurfaceSizeMeasureMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSurfaceSizeMeasureMode.h; sourceTree = "<group>"; };
 		12BE9F5BF66F6857660513D6DD0B88D5 /* RCTAccessibilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTAccessibilityManager.m; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		2FB34D433AA99C1C620A382AA4A93439 /* RCTWrapperViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTWrapperViewController.m; sourceTree = "<group>"; };
 		3044F8B6EBBADB4727AF3BE86B1FB940 /* RCTSegmentedControlManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSegmentedControlManager.h; sourceTree = "<group>"; };
 		30EEB4ADC4A486BED9FF6DC3C66BE7E6 /* RCTNavItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTNavItem.h; sourceTree = "<group>"; };
+		3319CBF3C330CF7E1FEAF43EA3C39C5A /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
 		336A406CABBF453D544512ADB6C32433 /* RCTAnimationType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTAnimationType.h; sourceTree = "<group>"; };
 		3371FFE7F5EED235449D5DA0328371F2 /* RCTRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTRootView.h; sourceTree = "<group>"; };
 		337732777559E0CF0485907288D17F89 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.cpp; path = yoga/YGLayout.cpp; sourceTree = "<group>"; };
@@ -128,15 +130,18 @@
 		34B3D357D96884582739D86E619A86E4 /* RCTAssert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTAssert.m; sourceTree = "<group>"; };
 		356E9BAA34A40FB75536321A56C8DAFD /* RCTPerformanceLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTPerformanceLogger.h; sourceTree = "<group>"; };
 		36391BE7B135F1D9E10959BB9422E62B /* RCTTouchEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTTouchEvent.h; sourceTree = "<group>"; };
+		3684194A17CAC730C8089D38DD07F669 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		36CDA463F179FF904F3D036F19033495 /* YGConfig.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGConfig.cpp; path = yoga/YGConfig.cpp; sourceTree = "<group>"; };
 		38DF5C42DA6DF8DAD4BA2CF3ECA984C3 /* RCTSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSlider.h; sourceTree = "<group>"; };
 		39B29FE5476D1CAE1610D05C4C4E2694 /* RCTRedBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTRedBox.m; sourceTree = "<group>"; };
+		39E5C2563D9B0068A88DBF19E8C25A82 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		3A39A7B0B1D68FD532156B4107711258 /* RCTMultipartDataTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTMultipartDataTask.h; sourceTree = "<group>"; };
 		3B315118F59CCCB14229A53A14911591 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		3C65BA3A276DE7CA4A73E65BE98D7223 /* RCTModalManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTModalManager.m; sourceTree = "<group>"; };
 		3D3977758473DEAEAC29B60ADA6A0FB7 /* RCTTextDecorationLineType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTTextDecorationLineType.h; sourceTree = "<group>"; };
 		3D94B421265C919B44D1F963C14EC7A9 /* RCTSurfaceStage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSurfaceStage.m; sourceTree = "<group>"; };
 		3DE2E4614AECAE7E290623558CCF7106 /* RCTKeyCommands.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTKeyCommands.h; sourceTree = "<group>"; };
+		3DFB27F50D066E7BC8F9C9FF5F75D183 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 		3E689AE1DFEC5FACF6B3F88D29D8839E /* RCTErrorCustomizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTErrorCustomizer.h; sourceTree = "<group>"; };
 		3F01F58188A2951642B0925CD336200E /* RCTUIManagerObserverCoordinator.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTUIManagerObserverCoordinator.mm; sourceTree = "<group>"; };
 		3F3BFC96361B10F8EAB077E16E19876B /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGMacros.h; path = yoga/YGMacros.h; sourceTree = "<group>"; };
@@ -162,6 +167,7 @@
 		50CA4260CF8DB1DAE58AC45B52BB3090 /* RCTCxxConvert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTCxxConvert.m; sourceTree = "<group>"; };
 		51573175DA022BE40A183B81BAC651F5 /* RCTTabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTTabBarItem.m; sourceTree = "<group>"; };
 		516C810773FC9968D10254BF8E47A781 /* RCTAppState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTAppState.m; sourceTree = "<group>"; };
+		5199A5D41DB01845C3B6A83B2DF8A136 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
 		51E135094174031BC13D3755E7E1EF1A /* RCTAsyncLocalStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTAsyncLocalStorage.h; sourceTree = "<group>"; };
 		53DCDE31ECF83F8A16B434A1AA59E2EB /* RCTSafeAreaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSafeAreaView.h; sourceTree = "<group>"; };
 		53FBCEF6B869C91329698CEC7E359200 /* RCTModalHostViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTModalHostViewManager.h; sourceTree = "<group>"; };
@@ -178,7 +184,6 @@
 		5C1CE0FA42436CA66B117C34D3FA2298 /* RCTAutoInsetsProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTAutoInsetsProtocol.h; sourceTree = "<group>"; };
 		5CA3FFFD750DA07464D654303FE4FE9E /* RCTLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTLog.h; sourceTree = "<group>"; };
 		5D791DD35E584BF4585FCC58D3524E6C /* RCTProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTProfile.m; sourceTree = "<group>"; };
-		5DAC93C078A040D408B04A98616331CC /* PULPulsate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PULPulsate.framework; path = PULPulsate/PULPulsate.framework; sourceTree = "<group>"; };
 		5DBB4D2BB96F0EE26F281E0FD4D4EBA0 /* RCTExceptionsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTExceptionsManager.m; sourceTree = "<group>"; };
 		5EE30281A81FA4C9A3006AEAFA0633EE /* RCTSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSwitch.m; sourceTree = "<group>"; };
 		5FB11753A3196511E972A47D045F280D /* RCTNavigator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTNavigator.m; sourceTree = "<group>"; };
@@ -196,6 +201,7 @@
 		71A10C8BA2A1305C6C93CCF54B9C1645 /* RCTScrollContentShadowView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTScrollContentShadowView.m; sourceTree = "<group>"; };
 		72B59AD4A79C46057008919213353650 /* RCTSurface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSurface.h; sourceTree = "<group>"; };
 		72B7BB0F0ABEBF9BB22C11307D43B14E /* RCTSurfaceView+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RCTSurfaceView+Internal.h"; sourceTree = "<group>"; };
+		731B8D5E7806A74C57D0EC239530A1E3 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		7351B4B78EB1924F0E759D1064E2ACE1 /* RCTWKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTWKWebView.h; sourceTree = "<group>"; };
 		73710ADAAC6F61EC4C7FEF2ACD45EE61 /* RCTKeyCommands.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTKeyCommands.m; sourceTree = "<group>"; };
 		73777B9964D4C2BFA05AA6BF0D95F7E6 /* RCTSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSegmentedControl.m; sourceTree = "<group>"; };
@@ -210,7 +216,6 @@
 		7DE708D566272E9C4CD9279E979E99AE /* RCTAccessibilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTAccessibilityManager.h; sourceTree = "<group>"; };
 		7E481C653C3A4C1B90BC7466EDA5BC0C /* RCTRefreshControlManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTRefreshControlManager.h; sourceTree = "<group>"; };
 		7E5F3914A7A83470EC8BF8C7CE701803 /* RCTShadowView+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RCTShadowView+Internal.h"; sourceTree = "<group>"; };
-		7ECC84E5A7B4C53011C886325F0FF179 /* PULPulsateBasic.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PULPulsateBasic.bundle; path = PULPulsate/PULPulsateBasic.bundle; sourceTree = "<group>"; };
 		7F28A04B4CC91B83B3B15AFED14A3490 /* RCTDevSettings.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTDevSettings.mm; sourceTree = "<group>"; };
 		7F98B070A79D51CBA49F06E21C9CAC97 /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGEnums.h; path = yoga/YGEnums.h; sourceTree = "<group>"; };
 		7FAC99A4DBE8ADD5208BC3B762166415 /* RCTNavItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTNavItem.m; sourceTree = "<group>"; };
@@ -255,21 +260,25 @@
 		9E3F92B2CECEEA66CFE94033EF975429 /* RCTErrorInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTErrorInfo.h; sourceTree = "<group>"; };
 		9E3FCBD1FF8D5951F1FEC890513A7E7D /* RCTKeyboardObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTKeyboardObserver.m; sourceTree = "<group>"; };
 		9E859FE60382339375961132D8334902 /* RCTImageSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTImageSource.m; sourceTree = "<group>"; };
+		9EE5824BA404338724657A57D66C81BA /* PULPulsate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PULPulsate.framework; path = PULPulsate/PULPulsate.framework; sourceTree = "<group>"; };
 		9EF6DC2A66A033F7C049DD4B6E64C58A /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = yoga/YGLayout.h; sourceTree = "<group>"; };
 		9F2C6E93879B9F42316198C7215269B2 /* RCTSurfaceRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSurfaceRootView.h; sourceTree = "<group>"; };
 		9F880F74C94E5D4698489E15F1D80C19 /* RCTDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTDisplayLink.h; sourceTree = "<group>"; };
 		9FB7AD7D1318B74F0742D1D7D8DEC979 /* RCTFont.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTFont.mm; sourceTree = "<group>"; };
 		9FC3A70E8A61F787FF9873EF7413AE8B /* RCTNavItemManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTNavItemManager.h; sourceTree = "<group>"; };
 		A0890E77E1C8534230B8CD0178777AD2 /* RCTProgressViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTProgressViewManager.h; sourceTree = "<group>"; };
+		A0FC375A2A21E3D0D3F75F5132623814 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		A428E80811CD4DD784F89DD5ECC080BA /* RCTModalHostViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTModalHostViewManager.m; sourceTree = "<group>"; };
 		A4D519F36E141CCEAF68992C5752B7E7 /* RCTUIManagerUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTUIManagerUtils.h; sourceTree = "<group>"; };
 		A4DF39899C262451F3B47D119304E4F8 /* RCTTiming.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTTiming.h; sourceTree = "<group>"; };
 		A6AC7818AEFC7D07170E54AE89A1F616 /* RCTSliderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSliderManager.m; sourceTree = "<group>"; };
+		A6BF3B4BA37760548F1E1C68DE4946F3 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		A83F46E4717F3B6D68685737B923186B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		A8A03F8A1B5748AD067772FBBFC92293 /* RCTSurfaceHostingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSurfaceHostingView.h; sourceTree = "<group>"; };
 		AA2900D14CE8BD00074FBC2BF0E6FD65 /* RCTSafeAreaView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSafeAreaView.m; sourceTree = "<group>"; };
 		AA9D9CAFAEB7E51ACE64EC70F4E57A61 /* RCTSurfaceRootShadowView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSurfaceRootShadowView.h; sourceTree = "<group>"; };
 		ABBBB7F983B4F695BC2D54AB49EBF0DC /* yoga-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "yoga-prefix.pch"; sourceTree = "<group>"; };
+		AC6390380DD14F24C1D87440D3762B0B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		AD06B2A29529402725E93785C4C1662C /* RCTScrollContentViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTScrollContentViewManager.h; sourceTree = "<group>"; };
 		AE83FA132976F9A00C8D6C1F0DCF400E /* RCTJSCSamplingProfiler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTJSCSamplingProfiler.m; sourceTree = "<group>"; };
 		AEBC45160D6A817AE3DBA03AD22877D6 /* RCTImageSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTImageSource.h; sourceTree = "<group>"; };
@@ -307,6 +316,7 @@
 		C9D25C5DA3E789C7DC1286B3CF736E32 /* RCTModalManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTModalManager.h; sourceTree = "<group>"; };
 		CB68AFDEAD71AA0A4145A97B523838D5 /* RCTDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTDatePicker.h; sourceTree = "<group>"; };
 		CB8BFD8C870B647E281F113097B8CB37 /* Pods-PulsateAppReact-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PulsateAppReact-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CBC200AE1A9B6B9F39EE8487B97221F1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		CD670189F87F804DA089DB8427836905 /* RCTUIManagerUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTUIManagerUtils.m; sourceTree = "<group>"; };
 		CD858AFF01F6EEDC436EE4B1B7C348DE /* RCTBorderDrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTBorderDrawing.m; sourceTree = "<group>"; };
 		D07D1EA6C99EB5CAD28F967431FEDCF9 /* RCTRootViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTRootViewDelegate.h; sourceTree = "<group>"; };
@@ -362,6 +372,7 @@
 		FCFD12BECDE7204F968CABA6011056E8 /* libyoga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libyoga.a; path = libyoga.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD01E44732658354D252E63B315F2910 /* RCTModuleMethod.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTModuleMethod.mm; sourceTree = "<group>"; };
 		FD1642CFF3AD071B319B68D294B6C38E /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Yoga.cpp; path = yoga/Yoga.cpp; sourceTree = "<group>"; };
+		FD8C93BC2D28A3CF4B9BF207E432EA53 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		FF23F9298B65B41DA093A5CA3169140E /* RCTVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTVersion.h; sourceTree = "<group>"; };
 		FFDA308E847CDD1AF596E9162F8BFD57 /* RCTRedBoxExtraDataViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTRedBoxExtraDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -384,14 +395,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A3E0EFA29BC7A5CFA44AF083E9C7081 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7ECC84E5A7B4C53011C886325F0FF179 /* PULPulsateBasic.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		1F6BD2AD8962F971C49D1D0C1B93A544 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,12 +526,12 @@
 			path = React/Views;
 			sourceTree = "<group>";
 		};
-		44EF3517C8CFA0E18948D15065CA904C /* Pods */ = {
+		37EFA006DB5057EFC8F078010CBA0307 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BFBBE6D5F6660FAF846954E945CE547C /* PULPulsate */,
+				9EE5824BA404338724657A57D66C81BA /* PULPulsate.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4874F454DB4EED9B63367460635BB0F3 /* SafeAreaView */ = {
@@ -664,6 +667,14 @@
 			path = React/Base;
 			sourceTree = "<group>";
 		};
+		5848E0B329D45941BE6D1F062F9BEB4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11DB20AF1D05ACE6096E73D26105D9EA /* PULPulsateBasic.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		5EDE7EA9077E5F2A2C9199DE9707315B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,10 +691,26 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				A1BBA32EF1C19A6E6C1F3C7F2F15E513 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				44EF3517C8CFA0E18948D15065CA904C /* Pods */,
+				C790B6B8488BC6E5CE509EB3216A37BA /* Pods */,
 				C3F4A0662823779BB4BDE342F9D2407C /* Products */,
 				E4A91AC3B8A77F09BC13EC06D0C17C7B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		83421308F14356864A36D84D93E4C6C9 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				731B8D5E7806A74C57D0EC239530A1E3 /* ANSCompatibility.h */,
+				3684194A17CAC730C8089D38DD07F669 /* Answers.h */,
+				FD8C93BC2D28A3CF4B9BF207E432EA53 /* CLSAttributes.h */,
+				39E5C2563D9B0068A88DBF19E8C25A82 /* CLSLogging.h */,
+				3DFB27F50D066E7BC8F9C9FF5F75D183 /* CLSReport.h */,
+				3319CBF3C330CF7E1FEAF43EA3C39C5A /* CLSStackFrame.h */,
+				A0FC375A2A21E3D0D3F75F5132623814 /* Crashlytics.h */,
+				9EF3133F60ED7B3A99596924B15A7A06 /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		83E8497B3F99206E4B70E3E9DF4DC6FC /* SurfaceHostingView */ = {
@@ -730,20 +757,20 @@
 			path = "../../../../ios/Pods/Target Support Files/yoga";
 			sourceTree = "<group>";
 		};
-		8D8F792006AF7F849CC9EF0773B94CEB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5DAC93C078A040D408B04A98616331CC /* PULPulsate.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		97C31DAF2A82A3B917665FD8CEC3EB76 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
 				11591F7E4DF963CDC52C69473B51311F /* RNPulsateSdkReact.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		9EF3133F60ED7B3A99596924B15A7A06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC6390380DD14F24C1D87440D3762B0B /* Crashlytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9F87D2B221B8BF04B8AD4FF20DAE26DA /* Surface */ = {
@@ -806,6 +833,25 @@
 			path = React/Profiler;
 			sourceTree = "<group>";
 		};
+		B0A701D189F99BE422CFF1C9534F4A70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBC200AE1A9B6B9F39EE8487B97221F1 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA0B14A646A90388B118CB209B0FA9BF /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				A6BF3B4BA37760548F1E1C68DE4946F3 /* FABAttributes.h */,
+				5199A5D41DB01845C3B6A83B2DF8A136 /* Fabric.h */,
+				B0A701D189F99BE422CFF1C9534F4A70 /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
 		BBE5C6A7BEE694A4B69423FD41A99728 /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,11 +879,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BFBBE6D5F6660FAF846954E945CE547C /* PULPulsate */ = {
+		BFCB351D3EC56647EFC308BD338E4319 /* PULPulsate */ = {
 			isa = PBXGroup;
 			children = (
-				8D8F792006AF7F849CC9EF0773B94CEB /* Frameworks */,
-				1A3E0EFA29BC7A5CFA44AF083E9C7081 /* Resources */,
+				37EFA006DB5057EFC8F078010CBA0307 /* Frameworks */,
+				5848E0B329D45941BE6D1F062F9BEB4F /* Resources */,
 			);
 			name = PULPulsate;
 			path = PULPulsate;
@@ -851,6 +897,16 @@
 				FCFD12BECDE7204F968CABA6011056E8 /* libyoga.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C790B6B8488BC6E5CE509EB3216A37BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83421308F14356864A36D84D93E4C6C9 /* Crashlytics */,
+				BA0B14A646A90388B118CB209B0FA9BF /* Fabric */,
+				BFCB351D3EC56647EFC308BD338E4319 /* PULPulsate */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D0FC99F780FB22233DD327D5D4D6CB18 /* yoga */ = {

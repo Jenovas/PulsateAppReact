@@ -1,21 +1,28 @@
 PODS:
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
   - PULPulsate (2.14.5)
   - React (0.57.5):
     - React/Core (= 0.57.5)
   - React/Core (0.57.5):
     - yoga (= 0.57.5.React)
-  - RNPulsateSdkReact (1.0.27):
+  - RNPulsateSdkReact (1.0.34):
     - PULPulsate
     - React
   - yoga (0.57.5.React)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - React (from `../node_modules/react-native`)
   - RNPulsateSdkReact (from `../node_modules/react-native-pulsate-sdk-react/ios`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
     - PULPulsate
 
 EXTERNAL SOURCES:
@@ -27,11 +34,13 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   PULPulsate: 6a06c8018145e160375dd2010cd2a77be54e1d13
   React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
-  RNPulsateSdkReact: f308729db40a2fbfe9ce70355863da8cb95d8419
+  RNPulsateSdkReact: 5af53bc670ef84b2da6e7ad625ada631981766da
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
-PODFILE CHECKSUM: 39b6a037ce2c95272fc0973b92c75fddd7509d2b
+PODFILE CHECKSUM: 58a4f67fd97ae9bdab682c06e027c691ebc38877
 
 COCOAPODS: 1.5.3
