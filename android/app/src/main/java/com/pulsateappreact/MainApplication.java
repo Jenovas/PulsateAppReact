@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.crashlytics.android.Crashlytics;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -11,6 +12,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.pulsatehq.internal.Pulsate;
 
+import io.fabric.sdk.android.Fabric;
 import java.util.Arrays;
 import java.util.List;
 import com.reactlibrary.RNPulsateSdkReactPackage;
@@ -51,6 +53,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
       super.onCreate();
+      Fabric.with(this, new Crashlytics());
       Pulsate.install(this);
       SoLoader.init(this, /* native exopackage */ false);
   }
