@@ -15,8 +15,7 @@ var { Pulsate } = PulsateManager;
 
 export default class App extends React.Component {
   _onPressRafael() {
-    Pulsate.setAuthData("d34a4374a9b21fa69c092493c55db142da25285ce154244cdd26958a32b08cd3", "a656a8e295ecb4732f514542718fe615efe852a0853e906158fe8db76f27fbb5", "164686352256");
-    Pulsate.startPulsateSessionForAlias("RafaelReact1",
+    Pulsate.startPulsateSessionForAlias("RafaelSkubisz",
     (msg) => 
     {
       Alert.alert(
@@ -43,15 +42,15 @@ export default class App extends React.Component {
       Pulsate.updateFirstName("Rafael");
       Pulsate.updateLastName("Skubisz");
       Pulsate.updateEmail("rafael.skubsz@pulsatehq.com");
-      Pulsate.updateGender(1);
+      Pulsate.updateGender(0);
       Pulsate.updateAge("28");
       Pulsate.setPrivacy(1);
-      Pulsate.createAttributeWithString("react-string", "android-react");
-      Pulsate.createAttributeWithFloat("react-float", 2.5);
-      Pulsate.createAttributeWithInt("react-int", 5);
-      Pulsate.createAttributeWithBool("react-bool", true);
-      Pulsate.incrementCounter("react-android-counter1", 5);
-      Pulsate.decrementCounter("react-android-counter2", 3);
+      Pulsate.createAttributeWithString("ReactString", "React");
+      Pulsate.createAttributeWithFloat("ReactFloat", 2.5);
+      Pulsate.createAttributeWithInt("ReactInt", 5);
+      Pulsate.createAttributeWithBool("ReactBool", true);
+      Pulsate.incrementCounter("ReactCounter", 5);
+      Pulsate.decrementCounter("ReactCounter", 3);
       Pulsate.createEvent("RafaelLoginEvent");
       Pulsate.forceAttributeSync();
 
@@ -89,8 +88,7 @@ export default class App extends React.Component {
   }
   
   _onPressPhelim() {
-    Pulsate.setAuthData("d34a4374a9b21fa69c092493c55db142da25285ce154244cdd26958a32b08cd3", "a656a8e295ecb4732f514542718fe615efe852a0853e906158fe8db76f27fbb5", "164686352256");
-    Pulsate.startPulsateSessionForAlias("PhelimReact",
+    Pulsate.startPulsateSessionForAlias("PhelimObrien",
     (msg) => 
     {
       Alert.alert(
@@ -117,15 +115,15 @@ export default class App extends React.Component {
       Pulsate.updateFirstName("Phelim");
       Pulsate.updateLastName("O Brien");
       Pulsate.updateEmail("phelim.obrien.react@pulsatehq.com");
-      Pulsate.updateGender(1);
+      Pulsate.updateGender(0);
       Pulsate.updateAge("30");
       Pulsate.setPrivacy(1);
-      Pulsate.createAttributeWithString("react-string", "android-react");
-      Pulsate.createAttributeWithFloat("react-float", 2.5);
-      Pulsate.createAttributeWithInt("react-int", 5);
-      Pulsate.createAttributeWithBool("react-bool", true);
-      Pulsate.incrementCounter("react-android-counter1", 5);
-      Pulsate.decrementCounter("react-android-counter2", 3);
+      Pulsate.createAttributeWithString("ReactString", "React");
+      Pulsate.createAttributeWithFloat("ReactFloat", 2.5);
+      Pulsate.createAttributeWithInt("ReactInt", 5);
+      Pulsate.createAttributeWithBool("ReactBool", true);
+      Pulsate.incrementCounter("ReactCounter", 5);
+      Pulsate.decrementCounter("ReactCounter", 3);
       Pulsate.createEvent("PhelimLoginEvent");
       Pulsate.forceAttributeSync();
 

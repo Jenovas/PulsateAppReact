@@ -1,0 +1,109 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+ lane :createProfiles do
+ 	begin
+	    produce(
+	      username: "skubisz.rafael@gmail.com",
+	      app_identifier: "universal.iosreact.app",
+	      app_name: "PulsateAppReact",
+	      skip_itc: true)
+	rescue => ex
+		UI.error(ex)
+	end
+
+	begin
+	    cert(
+	      username: "skubisz.rafael@gmail.com")
+    rescue => ex
+		UI.error(ex)
+	end
+
+	begin
+	    sigh(
+	      username: "skubisz.rafael@gmail.com",
+	      app_identifier: "universal.iosreact.app")
+    rescue => ex
+		UI.error(ex)
+	end
+
+	begin
+	    pem(
+	      username: "skubisz.rafael@gmail.com",
+	      app_identifier: "universal.iosreact.app")
+    rescue => ex
+		UI.error(ex)
+	end
+
+
+    begin
+	    cert(
+	      development: true,
+	      username: "skubisz.rafael@gmail.com")
+    rescue => ex
+		UI.error(ex)
+	end
+
+	begin
+	    sigh(
+	      development: true,
+	      username: "skubisz.rafael@gmail.com",
+	      app_identifier: "universal.iosreact.app")
+    rescue => ex
+		UI.error(ex)
+	end
+
+	begin
+	    pem(
+	      development: true,
+	      username: "skubisz.rafael@gmail.com",
+	      app_identifier: "universal.iosreact.app")
+    rescue => ex
+		UI.error(ex)
+	end
+  end
+
+  lane :beta do |values|
+    # Fabric generated this lane for deployment to Crashlytics Beta
+    # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
+    gym(scheme: 'PulsateAppReact', export_method: 'enterprise')
+
+    emails = values[:test_email] ? values[:test_email] : ['rafael.skubisz@pulsatehq.com'] # You can list more emails here
+    groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
+
+    crashlytics(api_token: '4d884b836ad8d9df177eee105b58177fcbfffa71',
+             build_secret: 'f0db8e27ddb0676f544d8ef8f4fb5b99fc862dfdc46a3c55c65a0f3cdbc37acd',
+                   emails: emails,
+                   groups: groups,
+                    notes: 'Distributed with fastlane', # Check out the changelog_from_git_commits action
+            notifications: true) # Should this distribution notify your testers via email?
+
+    # for all available options run `fastlane action crashlytics`
+
+    # You can notify your team in chat that a beta build has been uploaded
+    # slack(
+    #   slack_url: "https://hooks.slack.com/services/YOUR/TEAM/INFO"
+    #   channel: "beta-releases",
+    #   message: "Successfully uploaded a beta release - see it at https://fabric.io/_/beta"
+    # )
+  end
+
+  error do |lane, exception|
+  # Send error notification
+  end
+end
