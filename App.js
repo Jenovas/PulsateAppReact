@@ -45,7 +45,7 @@ export default class App extends React.Component {
       Pulsate.updateGender(0);
       Pulsate.updateAge("28");
       Pulsate.setPrivacy(1);
-      Pulsate.createAttributeWithString("ReactString", "React");
+      Pulsate.createAttributeWithString("ReactString", "ReactRafael");
       Pulsate.createAttributeWithFloat("ReactFloat", 2.5);
       Pulsate.createAttributeWithInt("ReactInt", 5);
       Pulsate.createAttributeWithBool("ReactBool", true);
@@ -118,12 +118,12 @@ export default class App extends React.Component {
       Pulsate.updateGender(0);
       Pulsate.updateAge("30");
       Pulsate.setPrivacy(1);
-      Pulsate.createAttributeWithString("ReactString", "React");
-      Pulsate.createAttributeWithFloat("ReactFloat", 2.5);
-      Pulsate.createAttributeWithInt("ReactInt", 5);
+      Pulsate.createAttributeWithString("ReactString", "ReactPhelim");
+      Pulsate.createAttributeWithFloat("ReactFloat", 3.5);
+      Pulsate.createAttributeWithInt("ReactInt", 10);
       Pulsate.createAttributeWithBool("ReactBool", true);
-      Pulsate.incrementCounter("ReactCounter", 5);
-      Pulsate.decrementCounter("ReactCounter", 3);
+      Pulsate.incrementCounter("ReactCounter", 15);
+      Pulsate.decrementCounter("ReactCounter", 5);
       Pulsate.createEvent("PhelimLoginEvent");
       Pulsate.forceAttributeSync();
 
@@ -232,6 +232,10 @@ export default class App extends React.Component {
     Pulsate.setUserAuthorized(false);
   }
 
+  _onPressNetwork() {
+    Pulsate.showNetworkAndroid(false);
+  }
+
   render() {
     return (
       <View style={styles.maincontainer}>
@@ -253,6 +257,9 @@ export default class App extends React.Component {
           </View> 
           <View style={styles.buttonContainer}>
             <Button onPress={this._onPressAuthorize} title="Authorize" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressNetwork} title="Show Network" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
           </View> 
         </View>
         <View style={styles.container}>     
@@ -273,6 +280,9 @@ export default class App extends React.Component {
           </View> 
           <View style={styles.buttonContainer}>
             <Button onPress={this._onPressUnauthorize} title="Unauthorize" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+          </View> 
+          <View style={styles.buttonContainer}>
+            <Button onPress={this._onPressNetwork} title="Show Network" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
           </View> 
         </View>
       </View>
