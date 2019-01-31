@@ -7,194 +7,77 @@
  */
 
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Alert} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View, Alert } from 'react-native';
 import { Button } from 'react-native-elements';
+import { PermissionsAndroid } from 'react-native';
 var PulsateManager = require('react-native-pulsate-sdk-react');
 var { Pulsate } = PulsateManager;
 
 export default class App extends React.Component {
-  _onPressRafael() {
-    Pulsate.startPulsateSessionForAlias("RafaelSkubisz",
-    (msg) => 
-    {
-      Alert.alert(
-        'Session Status',
-        'Session Success',
-        [
-          {text: 'OK', onPress: () => console.log('OK Pressed')},
-        ],
-        { cancelable: false }
-      )
-
-      Pulsate.sendLocationWithBeaconEvents(true);
-      Pulsate.setLocationUpdatesEnabled(true);
-      Pulsate.isPushNotificationEnabled(
-        (msg) => 
-        {
-          console.log(msg);
-        },
-        (err) => 
-        {
-          console.log(err);
-        }
-      );
-      Pulsate.updateFirstName("Rafael");
-      Pulsate.updateLastName("Skubisz");
-      Pulsate.updateEmail("rafael.skubsz@pulsatehq.com");
-      Pulsate.updateGender(0);
-      Pulsate.updateAge("28");
-      Pulsate.setPrivacy(1);
-      Pulsate.createAttributeWithString("ReactString", "ReactRafael");
-      Pulsate.createAttributeWithFloat("ReactFloat", 2.5);
-      Pulsate.createAttributeWithInt("ReactInt", 5);
-      Pulsate.createAttributeWithBool("ReactBool", true);
-      Pulsate.incrementCounter("ReactCounter", 5);
-      Pulsate.decrementCounter("ReactCounter", 3);
-      Pulsate.createEvent("RafaelLoginEvent");
-      Pulsate.forceAttributeSync();
-
-      Pulsate.setUserUnauthorizedListenerAndroid(
-        (msg) => 
-        {
-          console.log(msg);
-        }
-      );
-      Pulsate.setUnreadCountUpdateListenerAndroid(
-        (msg) => 
-        {
-          console.log(msg);
-        }
-      );
-
-      Pulsate.isUserAuthorizedIOS(
-        (msg) => 
-        {
-          console.log(msg);
-        },
-        (err) => 
-        {
-          console.log(err);
-        }
-      );
-      Pulsate.startLocationIOS();
-      Pulsate.startRemoteNotificationsIOS();
-      Pulsate.getBadgeCountIOS();
-    }, 
-    (err) => 
-    {
-      console.log(err);
-    });
+  constructor(props) {
+    super(props);
+    this.state = {
+      alias: '',
+      firstname: '',
+      lastname: '',
+      email: '',
+      attrName: '',
+      attrValue: '',
+      eventName: ''
+    };
   }
-  
-  _onPressPhelim() {
-    Pulsate.startPulsateSessionForAlias("PhelimObrien",
-    (msg) => 
-    {
-      Alert.alert(
-        'Session Status',
-        'Session Success',
-        [
-          {text: 'OK', onPress: () => console.log('OK Pressed')},
-        ],
-        { cancelable: false }
-      )
 
-      Pulsate.sendLocationWithBeaconEvents(true);
-      Pulsate.setLocationUpdatesEnabled(true);
-      Pulsate.isPushNotificationEnabled(
-        (msg) => 
-        {
-          console.log(msg);
-        },
-        (err) => 
-        {
-          console.log(err);
-        }
-      );
-      Pulsate.updateFirstName("Phelim");
-      Pulsate.updateLastName("O Brien");
-      Pulsate.updateEmail("phelim.obrien.react@pulsatehq.com");
-      Pulsate.updateGender(0);
-      Pulsate.updateAge("30");
-      Pulsate.setPrivacy(1);
-      Pulsate.createAttributeWithString("ReactString", "ReactPhelim");
-      Pulsate.createAttributeWithFloat("ReactFloat", 3.5);
-      Pulsate.createAttributeWithInt("ReactInt", 10);
-      Pulsate.createAttributeWithBool("ReactBool", true);
-      Pulsate.incrementCounter("ReactCounter", 15);
-      Pulsate.decrementCounter("ReactCounter", 5);
-      Pulsate.createEvent("PhelimLoginEvent");
-      Pulsate.forceAttributeSync();
+  async requestLocationPermission() {
+    const chckLocationPermission = PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
+    if (chckLocationPermission === PermissionsAndroid.RESULTS.GRANTED) {
 
-      Pulsate.setUserUnauthorizedListenerAndroid(
-        (msg) => 
-        {
-          console.log(msg);
-        }
-      );
-      Pulsate.setUnreadCountUpdateListenerAndroid(
-        (msg) => 
-        {
-          console.log(msg);
-        }
-      );
+    } else {
+      try {
+        const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+          {
+            'title': 'Cool Location App required Location permission',
+            'message': 'We required Location permission in order to get device location ' +
+              'Please grant us.'
+          }
+        )
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
 
-      Pulsate.isUserAuthorizedIOS(
-        (msg) => 
-        {
-          console.log(msg);
-        },
-        (err) => 
-        {
-          console.log(err);
+        } else {
+
         }
-      );
-      Pulsate.startLocationIOS();
-      Pulsate.startRemoteNotificationsIOS();
-      Pulsate.getBadgeCountIOS();
-    }, 
-    (err) => 
-    {
-      Alert.alert(
-        'Session Status',
-        'Session Error ' + err,
-        [
-          {text: 'OK', onPress: () => console.log('OK Pressed')},
-        ],
-        { cancelable: false }
-      )
-    });
-  }
+      } catch (err) {
+        alert(err)
+      }
+    }
+  };
 
   _onPressFeed() {
-      Pulsate.showFeed();
+    Pulsate.showFeed();
   }
 
   _onPressLogout() {
     Pulsate.logoutCurrentAlias(
-      (msg) => 
-        {
-          Alert.alert(
-            'Logout Status',
-            'Logout Success',
-            [
-              {text: 'OK', onPress: () => console.log('OK Pressed')},
-            ],
-            { cancelable: false }
-          )
-        },
-        (err) => 
-        {
-          Alert.alert(
-            'Logout Status',
-            'Logout Error ' + err,
-            [
-              {text: 'OK', onPress: () => console.log('OK Pressed')},
-            ],
-            { cancelable: false }
-          )
-        }
+      (msg) => {
+        Alert.alert(
+          'Logout Status',
+          'Logout Success',
+          [
+            { text: 'OK', onPress: () => console.log('OK Pressed') },
+          ],
+          { cancelable: false }
+        )
+      },
+      (err) => {
+        Alert.alert(
+          'Logout Status',
+          'Logout Error ' + err,
+          [
+            { text: 'OK', onPress: () => console.log('OK Pressed') },
+          ],
+          { cancelable: false }
+        )
+      }
     );
   }
 
@@ -238,84 +121,236 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.maincontainer}>
-        <View style={styles.container}>
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressRafael} title="Login Rafael" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+      <ScrollView contentContainerStyle={styles.mainContainer}>
+        <View>
+          <View>
+            <TextInput style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType='email-address'
+              returnKeyType="done"
+              onChangeText={(value) => this.setState({ alias: value })}
+              value={this.state.alias}
+              placeholder='Alias'
+              placeholderTextColor='rgba(225,225,225,0.7)' />
+            <TextInput style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType='email-address'
+              returnKeyType="done"
+              onChangeText={(value) => this.setState({ firstname: value })}
+              value={this.state.firstname}
+              placeholder='First Name'
+              placeholderTextColor='rgba(225,225,225,0.7)' />
+            <TextInput style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType='email-address'
+              returnKeyType="done"
+              onChangeText={(value) => this.setState({ lastname: value })}
+              value={this.state.lastname}
+              placeholder='Last Name'
+              placeholderTextColor='rgba(225,225,225,0.7)' />
+            <TextInput style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType='email-address'
+              returnKeyType="done"
+              onChangeText={(value) => this.setState({ email: value })}
+              value={this.state.email}
+              placeholder='Email'
+              placeholderTextColor='rgba(225,225,225,0.7)' />
+            <TouchableOpacity style={styles.loginContainer}
+              onPress={() => {
+                Pulsate.startPulsateSessionForAlias(this.state.alias,
+                  (msg) => {
+                    Alert.alert(
+                      'Session Status',
+                      'Session Success',
+                      [
+                        { text: 'OK', onPress: () => console.log('OK Pressed') },
+                      ],
+                      { cancelable: false }
+                    )
+
+                    this.requestLocationPermission();
+
+                    if (this.state.firstname.trim() != '' && this.state.firstname.trim().length != 0)
+                      Pulsate.updateFirstName(this.state.firstname);
+
+                    if (this.state.lastname.trim() != '' && this.state.lastname.trim().length != 0)
+                      Pulsate.updateLastName(this.state.lastname);
+
+                    if (this.state.email.trim() != '' && this.state.email.trim().length != 0)
+                      Pulsate.updateEmail(this.state.email);
+
+                    Pulsate.forceAttributeSync();
+                  },
+                  (err) => {
+                    console.log(err);
+                  });
+              }
+              }>
+              <Text style={styles.loginText}>LOGIN</Text>
+            </TouchableOpacity>
           </View>
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressLogout} title="Logout" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View>  
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressEnableThread} title="Enable Thread" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressEnablePush} title="Enable Push" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressEnableInApps} title="Enable InApps" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressAuthorize} title="Authorize" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
+
+          <View style={styles.nextContainer}>
+            <TouchableOpacity style={styles.loginContainer}
+              onPress={this._onPressFeed}>
+              <Text style={styles.loginText}>SHOW FEED</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.loginContainer}
+              onPress={this._onPressNetwork}>
+              <Text style={styles.loginText}>SHOW NETWORK LOGS</Text>
+            </TouchableOpacity>
           </View>
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressNetwork} title="Show Network" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
+
+          <View style={styles.nextContainer}>
+            <View style={styles.row}>
+              <TextInput style={styles.inputRow}
+                autoCapitalize="none"
+                autoCorrect={false}
+                keyboardType='email-address'
+                returnKeyType="done"
+                onChangeText={(value) => this.setState({ attrName: value })}
+                value={this.state.attrName}
+                placeholder='String Name'
+                placeholderTextColor='rgba(225,225,225,0.7)' />
+              <TextInput style={styles.inputRow}
+                autoCapitalize="none"
+                autoCorrect={false}
+                keyboardType='email-address'
+                returnKeyType="done"
+                onChangeText={(value) => this.setState({ attrValue: value })}
+                value={this.state.attrValue}
+                placeholder='String Value'
+                placeholderTextColor='rgba(225,225,225,0.7)' />
+            </View>
+
+            <TouchableOpacity style={styles.buttonRow}
+              onPress={() => {
+                Pulsate.createAttributeWithString(this.state.attrName, this.state.attrValue);
+                Pulsate.forceAttributeSync();
+              }
+              }>
+              <Text style={styles.loginText}>SEND ATTRIBUTES</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.nextContainer}>
+            <TextInput style={styles.inputRow}
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType='email-address'
+              returnKeyType="done"
+              onChangeText={(value) => this.setState({ eventName: value })}
+              value={this.state.eventName}
+              placeholder='Event Name'
+              placeholderTextColor='rgba(225,225,225,0.7)' />
+
+            <TouchableOpacity style={styles.buttonRow}
+              onPress={() => {
+                Pulsate.createEvent(this.state.eventName);
+              }
+              }>
+              <Text style={styles.loginText}>SEND EVENT</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.nextContainer}>
+            <View style={styles.row}>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressEnableThread}>
+                <Text style={styles.loginText}>ENABLE THREAD</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressDisableThread}>
+                <Text style={styles.loginText}>DISABLE THREAD</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.row}>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressEnablePush}>
+                <Text style={styles.loginText}>ENABLE PUSH</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressDisablePush}>
+                <Text style={styles.loginText}>DISABLE PUSH</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.row}>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressEnableInApps}>
+                <Text style={styles.loginText}>ENABLE INAPPS</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressDisableInApps}>
+                <Text style={styles.loginText}>DISABLE INAPPS</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.row}>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressAuthorize}>
+                <Text style={styles.loginText}>AUTHORIZE</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressUnauthorize}>
+                <Text style={styles.loginText}>UNAUTHORIZE</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
-        <View style={styles.container}>     
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressPhelim} title="Login Phelim" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View>
-          <View style={styles.buttonContainer}>    
-            <Button onPress={this._onPressFeed} title="Show Feed" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View>
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressDisableThread} title="Disable Thread" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressDisablePush} title="Disable Push" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressDisableInApps} title="Disable InApps" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressUnauthorize} title="Unauthorize" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-          <View style={styles.buttonContainer}>
-            <Button onPress={this._onPressNetwork} title="Show Network" color="#FFFFFF" accessibilityLabel="Tap on Me"/>
-          </View> 
-        </View>
-      </View>
+      </ScrollView >
     );
   }
 }
 
 const styles = StyleSheet.create({
-  maincontainer: {
-    flex: 1,
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: '#FFFFFF'
+  mainContainer: {
+    padding: 20,
+    backgroundColor: '#104858'
   },
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    backgroundColor: '#FFFFFF'
+  nextContainer: {
+    marginTop: 50,
   },
-  buttonContainer: {
-    width:190,
-    backgroundColor: '#2E9298',
-    borderRadius: 10,
+  input: {
+    height: 40,
+    backgroundColor: 'rgba(225,225,225,0.2)',
+    marginBottom: 10,
     padding: 10,
-    shadowColor: '#000000',
-    shadowOffset: {
-      width: 0,
-      height: 3
-    },
-    shadowRadius: 10,
-    shadowOpacity: 0.25
+    color: '#fff'
+  },
+  loginContainer: {
+    backgroundColor: '#2980b6',
+    marginBottom: 10,
+    padding: 10
+  },
+  loginText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: '700'
+  },
+  row: {
+    flex: 1,
+    flexDirection: "row",
+  },
+  buttonRow: {
+    flex: 1,
+    height: 40,
+    backgroundColor: '#2980b6',
+    marginBottom: 10,
+    padding: 10
+  },
+  inputRow: {
+    flex: 1,
+    height: 40,
+    backgroundColor: 'rgba(225,225,225,0.2)',
+    marginBottom: 10,
+    padding: 10,
+    color: '#fff'
   }
 });

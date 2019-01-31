@@ -117,7 +117,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "2.13.10-REACT"
+        versionName "2.13.10-RC3"
         multiDexEnabled = true
         ndk {
             abiFilters "armeabi-v7a", "x86"
@@ -133,6 +133,7 @@ android {
     }
     buildTypes {
         release {
+            debuggable true
             signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
