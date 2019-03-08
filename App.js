@@ -27,7 +27,55 @@ export default class App extends React.Component {
       attrValue: '',
       eventName: ''
     };
+
+    console.debug('constructor');
+    //this.onRightButtonClicked = this.onRightButtonClicked.bind(this);
+    this.onUnauthorizedAction = this.onUnauthorizedAction.bind(this);
+    //this.onUnreadCountUpdate = this.onUnreadCountUpdate.bind(this);
   }
+
+  componentDidMount() {
+    console.debug('componentDidMount');
+    //DeviceEventEmitter.addListener('onRightButtonClicked', this.onRightButtonClicked);
+    DeviceEventEmitter.addListener('onUnauthorizedAction', this.onUnauthorizedAction);
+    //DeviceEventEmitter.addListener('onUnreadCountUpdate', this.onUnreadCountUpdate);
+  }
+
+  // onRightButtonClicked(e) {
+  //   console.debug('onRightButtonClicked');
+  //   Alert.alert(
+  //     'onRightButtonClicked Event',
+  //     'onRightButtonClicked Event',
+  //     [
+  //       { text: 'OK', onPress: () => console.log('OK Pressed') },
+  //     ],
+  //     { cancelable: false }
+  //   )
+  // }
+
+  onUnauthorizedAction(e) {
+    console.debug('onUnauthorizedAction');
+    Alert.alert(
+      'onUnauthorizedAction Event',
+      'onUnauthorizedAction Event',
+      [
+        { text: 'OK', onPress: () => console.log('OK Pressed') },
+      ],
+      { cancelable: false }
+    )
+  }
+
+  // onUnreadCountUpdate(e) {
+  //   console.debug('onUnreadCountUpdate');
+  //   Alert.alert(
+  //     'onUnreadCountUpdate Event',
+  //     'onUnreadCountUpdate Event',
+  //     [
+  //       { text: 'OK', onPress: () => console.log('OK Pressed') },
+  //     ],
+  //     { cancelable: false }
+  //   )
+  // }
 
   async requestLocationPermission() {
     const chckLocationPermission = PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
@@ -84,41 +132,6 @@ export default class App extends React.Component {
 
   _onPressEnableThread() {
     Pulsate.setNewThreadButtonEnabled(true);
-    const onRightButtonClicked = (event) => {
-      Alert.alert(
-        'onRightButtonClicked Event',
-        'onRightButtonClicked Event',
-        [
-          { text: 'OK', onPress: () => console.log('OK Pressed') },
-        ],
-        { cancelable: false }
-      )
-    };
-    DeviceEventEmitter.addListener('onRightButtonClicked', onRightButtonClicked);
-
-    const onUnauthorizedAction = (event) => {
-      Alert.alert(
-        'onUnauthorizedAction Event',
-        'onUnauthorizedAction Event',
-        [
-          { text: 'OK', onPress: () => console.log('OK Pressed') },
-        ],
-        { cancelable: false }
-      )
-    };  
-    DeviceEventEmitter.addListener('onUnauthorizedAction', onUnauthorizedAction);
-
-    const onUnreadCountUpdate = (event) => {
-      Alert.alert(
-        'onUnreadCountUpdate Event',
-        'onUnreadCountUpdate Event',
-        [
-          { text: 'OK', onPress: () => console.log('OK Pressed') },
-        ],
-        { cancelable: false }
-      )
-    };
-    DeviceEventEmitter.addListener('onUnreadCountUpdate', onUnreadCountUpdate);
   }
 
   _onPressDisableThread() {
@@ -149,6 +162,22 @@ export default class App extends React.Component {
 
   _onPressUnauthorize() {
     Pulsate.setUserAuthorized(false);
+  }
+
+  _onPressEnableInitials() {
+    Pulsate.useInitialsForUserAvatar(true);
+  }
+
+  _onPressDisableInitials() {
+    Pulsate.useInitialsForUserAvatar(false);
+  }
+
+  _onPressEnableRightBtn() {
+    Pulsate.setOnInboxRightButtonClickListenerAndroid();
+  }
+
+  _onPressDisableRightBtn() {
+    Pulsate.removeOnInboxRightButtonClickListenerAndroid();
   }
 
   _onPressNetwork() {
@@ -221,8 +250,6 @@ export default class App extends React.Component {
                       Pulsate.updateEmail(this.state.email);
 
                     Pulsate.forceAttributeSync();
-                    Pulsate.useInitialsForUserAvatar(true);
-                    Pulsate.setOnInboxRightButtonClickListenerAndroid();
                   },
                   (err) => {
                     console.log(err);
@@ -338,6 +365,28 @@ export default class App extends React.Component {
               <TouchableOpacity style={styles.buttonRow}
                 onPress={this._onPressUnauthorize}>
                 <Text style={styles.loginText}>UNAUTHORIZE</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.row}>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressEnableInitials}>
+                <Text style={styles.loginText}>ENABLE INITIALS</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressDisableInitials}>
+                <Text style={styles.loginText}>DISABLE INITIALS</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.row}>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressEnableRightBtn}>
+                <Text style={styles.loginText}>ENABLE RIGHT BTN</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonRow}
+                onPress={this._onPressDisableRightBtn}>
+                <Text style={styles.loginText}>DISABLE RIGHT BTN</Text>
               </TouchableOpacity>
             </View>
           </View>
