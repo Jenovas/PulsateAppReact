@@ -35,6 +35,16 @@
   
   PULAuthorizationData* authData = [[PULAuthorizationData alloc] initWithAppId:@"2242f8d4f39368691ad0e5e632eab814f374658d1916c5bba69cc08e8749543d" andAppKey:@"3b28e82f9efaafeba512014fb986ef855efbba6c79760f204d2845938c2a0a65" validationError:nil];
   PULPulsateManager* manager = [PULPulsateFactory getInstanceWithAuthorizationData:authData withLocationEnabled:YES withPushEnabled:YES withLaunchOptions:launchOptions withPulsateAppDelegate:YES andPulsateNotificationDelegate:YES error:nil];
+
+  UIButton* _cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
+  [_cancelButton setTitle:@"Test" forState:UIControlStateNormal];
+  [_cancelButton sizeToFit];
+  [_cancelButton addTarget:self
+                    action:@selector(cancelPressed)
+          forControlEvents:UIControlEventTouchUpInside];
+  UIBarButtonItem* cancelItem = [[UIBarButtonItem alloc] initWithCustomView:_cancelButton];
+  [manager setInboxRightButton:cancelItem];
+  
   [manager startPulsateSession:^(BOOL success, NSError * _Nullable error) {
     
   }];

@@ -11,6 +11,7 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View, Alert } from 'react-native';
 import { Button } from 'react-native-elements';
 import { PermissionsAndroid } from 'react-native';
+import { DeviceEventEmitter } from 'react-native';
 var PulsateManager = require('react-native-pulsate-sdk-react');
 var { Pulsate } = PulsateManager;
 
@@ -83,6 +84,41 @@ export default class App extends React.Component {
 
   _onPressEnableThread() {
     Pulsate.setNewThreadButtonEnabled(true);
+    const onRightButtonClicked = (event) => {
+      Alert.alert(
+        'onRightButtonClicked Event',
+        'onRightButtonClicked Event',
+        [
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+        ],
+        { cancelable: false }
+      )
+    };
+    DeviceEventEmitter.addListener('onRightButtonClicked', onRightButtonClicked);
+
+    const onUnauthorizedAction = (event) => {
+      Alert.alert(
+        'onUnauthorizedAction Event',
+        'onUnauthorizedAction Event',
+        [
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+        ],
+        { cancelable: false }
+      )
+    };  
+    DeviceEventEmitter.addListener('onUnauthorizedAction', onUnauthorizedAction);
+
+    const onUnreadCountUpdate = (event) => {
+      Alert.alert(
+        'onUnreadCountUpdate Event',
+        'onUnreadCountUpdate Event',
+        [
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+        ],
+        { cancelable: false }
+      )
+    };
+    DeviceEventEmitter.addListener('onUnreadCountUpdate', onUnreadCountUpdate);
   }
 
   _onPressDisableThread() {
@@ -185,6 +221,8 @@ export default class App extends React.Component {
                       Pulsate.updateEmail(this.state.email);
 
                     Pulsate.forceAttributeSync();
+                    Pulsate.useInitialsForUserAvatar(true);
+                    Pulsate.setOnInboxRightButtonClickListenerAndroid();
                   },
                   (err) => {
                     console.log(err);

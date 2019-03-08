@@ -103,9 +103,7 @@ android {
         release {
             keyAlias 'pulsate'
             keyPassword 'qazwsx91'
-            storeFile file('C:\\Users\\Rafael\\StudioProjects\\pulsate.jks')
-            //storeFile file('C:\\Android\\StudioProjects\\pulsate.jks')
-            //storeFile file('/Users/rafaelskubisz/StudioProjects/pulsate.jks')
+            storeFile file('/Users/rafaelskubisz/StudioProjects/pulsate.jks')
             storePassword 'qazx91'
             v1SigningEnabled true
             v2SigningEnabled true
@@ -117,7 +115,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "2.13.10-RC3"
+        versionName "2.13.14"
         multiDexEnabled = true
         ndk {
             abiFilters "armeabi-v7a", "x86"
@@ -181,7 +179,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation project(':react-native-pulsate-sdk-react')
     // Crashlytics
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
 }
 
 // Run this once to be able to run the application with BUCK

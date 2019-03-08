@@ -2,15 +2,15 @@ PODS:
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - Fabric (1.9.0)
-  - PULPulsate (2.14.5)
-  - React (0.57.5):
-    - React/Core (= 0.57.5)
-  - React/Core (0.57.5):
-    - yoga (= 0.57.5.React)
-  - RNPulsateSdkReact (1.0.35):
+  - PULPulsate (2.14.12)
+  - React (0.58.6):
+    - React/Core (= 0.58.6)
+  - React/Core (0.58.6):
+    - yoga (= 0.58.6.React)
+  - RNPulsateSdkReact (1.0.38):
     - PULPulsate
     - React
-  - yoga (0.57.5.React)
+  - yoga (0.58.6.React)
 
 DEPENDENCIES:
   - Crashlytics
@@ -36,10 +36,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  PULPulsate: 6a06c8018145e160375dd2010cd2a77be54e1d13
-  React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
-  RNPulsateSdkReact: 9113658eb0267a3f980bceabd9ac2cdfb07ef843
-  yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
+  PULPulsate: 15d63df2a603d3056f3dac35beba9b76702e74ca
+  React: 16c4fb7ce3fc30c041bce809ceae33bf57e7c142
+  RNPulsateSdkReact: d782a3adccf2f694eee2b3b931188a97466d3215
+  yoga: 0885622311729a02c2bc02dca97167787a51488b
 
 PODFILE CHECKSUM: 58a4f67fd97ae9bdab682c06e027c691ebc38877
 
