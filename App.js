@@ -29,53 +29,53 @@ export default class App extends React.Component {
     };
 
     console.debug('constructor');
-    //this.onRightButtonClicked = this.onRightButtonClicked.bind(this);
+    this.onRightButtonClicked = this.onRightButtonClicked.bind(this);
     this.onUnauthorizedAction = this.onUnauthorizedAction.bind(this);
-    //this.onUnreadCountUpdate = this.onUnreadCountUpdate.bind(this);
+    this.onUnreadCountUpdate = this.onUnreadCountUpdate.bind(this);
   }
 
   componentDidMount() {
     console.debug('componentDidMount');
-    //DeviceEventEmitter.addListener('onRightButtonClicked', this.onRightButtonClicked);
+    DeviceEventEmitter.addListener('onRightButtonClicked', this.onRightButtonClicked);
     DeviceEventEmitter.addListener('onUnauthorizedAction', this.onUnauthorizedAction);
-    //DeviceEventEmitter.addListener('onUnreadCountUpdate', this.onUnreadCountUpdate);
+    DeviceEventEmitter.addListener('onUnreadCountUpdate', this.onUnreadCountUpdate);
   }
 
-  // onRightButtonClicked(e) {
-  //   console.debug('onRightButtonClicked');
-  //   Alert.alert(
-  //     'onRightButtonClicked Event',
-  //     'onRightButtonClicked Event',
-  //     [
-  //       { text: 'OK', onPress: () => console.log('OK Pressed') },
-  //     ],
-  //     { cancelable: false }
-  //   )
-  // }
+  onRightButtonClicked(e) {
+    console.debug('onRightButtonClicked');
+    // Alert.alert(
+    //   'onRightButtonClicked Event',
+    //   'onRightButtonClicked Event',
+    //   [
+    //     { text: 'OK', onPress: () => console.log('OK Pressed') },
+    //   ],
+    //   { cancelable: false }
+    // )
+  }
 
   onUnauthorizedAction(e) {
     console.debug('onUnauthorizedAction');
-    Alert.alert(
-      'onUnauthorizedAction Event',
-      'onUnauthorizedAction Event',
-      [
-        { text: 'OK', onPress: () => console.log('OK Pressed') },
-      ],
-      { cancelable: false }
-    )
+    // Alert.alert(
+    //   'onUnauthorizedAction Event',
+    //   'onUnauthorizedAction Event',
+    //   [
+    //     { text: 'OK', onPress: () => console.log('OK Pressed') },
+    //   ],
+    //   { cancelable: false }
+    // )
   }
 
-  // onUnreadCountUpdate(e) {
-  //   console.debug('onUnreadCountUpdate');
-  //   Alert.alert(
-  //     'onUnreadCountUpdate Event',
-  //     'onUnreadCountUpdate Event',
-  //     [
-  //       { text: 'OK', onPress: () => console.log('OK Pressed') },
-  //     ],
-  //     { cancelable: false }
-  //   )
-  // }
+  onUnreadCountUpdate(e) {
+    console.debug('onUnreadCountUpdate');
+    // Alert.alert(
+    //   'onUnreadCountUpdate Event',
+    //   'onUnreadCountUpdate Event',
+    //   [
+    //     { text: 'OK', onPress: () => console.log('OK Pressed') },
+    //   ],
+    //   { cancelable: false }
+    // )
+  }
 
   async requestLocationPermission() {
     const chckLocationPermission = PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
@@ -102,6 +102,7 @@ export default class App extends React.Component {
   };
 
   _onPressFeed() {
+    Pulsate.setUnreadCountUpdateListenerAndroid();
     Pulsate.showFeed();
   }
 
@@ -162,6 +163,7 @@ export default class App extends React.Component {
 
   _onPressUnauthorize() {
     Pulsate.setUserAuthorized(false);
+    Pulsate.setUserUnauthorizedListenerAndroid();
   }
 
   _onPressEnableInitials() {
