@@ -103,8 +103,8 @@ android {
         release {
             keyAlias 'pulsate'
             keyPassword 'qazwsx91'
-            storeFile file('C:\\Android\\StudioProjects\\pulsate.jks')
-            //storeFile file('C:\\Users\\Rafael\\StudioProjects\\pulsate.jks')
+            //storeFile file('C:\\Android\\StudioProjects\\pulsate.jks')
+            storeFile file('C:\\Users\\Rafael\\StudioProjects\\pulsate.jks')
             //storeFile file('/Users/rafaelskubisz/StudioProjects/pulsate.jks')
             storePassword 'qazx91'
             v1SigningEnabled true
